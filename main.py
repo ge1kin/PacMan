@@ -11,17 +11,17 @@ class Coin:
 
 
 class Character:
-    def __init__(self, center_x: int, center_y: int, speed: int):
+    def __init__(self, center_x: int, center_y: int):
         self.center_x: int = center_x
         self.center_y: int = center_y
-        self.speed: int = int(speed)
         self.change_x: int = 0
         self.change_y: int = 0
+        self.speed: int = 1
 
 
 class Player(Character):
-    def __init__(self, center_x: int, center_y: int, speed: int):
-        super().__init__(center_x, center_y, speed)
+    def __init__(self, center_x: int, center_y: int):
+        super().__init__(center_x, center_y)
         self.score: int = 0
         self.lives: int = 3
 
@@ -31,8 +31,8 @@ class Player(Character):
 
 
 class Enemy(Character):
-    def __init__(self, center_x: int, center_y: int, speed: int):
-        super().__init__(center_x, center_y, speed)
+    def __init__(self, center_x: int, center_y: int):
+        super().__init__(center_x, center_y)
         self.time_to_change_direction: float = 0
 
 
