@@ -2,9 +2,9 @@ import random
 
 
 class Coin:
-    def __init__(self, center_x: str, center_y: str):
-        self.center_x = int(center_x)
-        self.center_y = int(center_y)
+    def __init__(self, center_x: int, center_y: int):
+        self.center_x = center_x
+        self.center_y = center_y
         self.value = 10
         self.change_x: int = 0
         self.change_y: int  = 0
