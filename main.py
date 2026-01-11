@@ -13,6 +13,8 @@ class Coin:
             self.value: int = 10
         else:
             self.value: int = int(value)
+        self.change_x: int = 0
+        self.change_y: int  = 0
 
 
 class Character:
@@ -54,9 +56,9 @@ class Enemy(Character):
         self.change_x, self.change_y = move_chosen[1], move_chosen[0]
         self.time_to_change_direction = random.uniform(0.3, 1.0)
 
-
     def update(self, delta_time: float = 1/60):
         while delta_time > 0:
             delta_time -= 0.001
         self.center_x = self.change_x * self.speed
+        self.center_y = self.change_y * self.speed
         self.center_y = self.change_y * self.speed
