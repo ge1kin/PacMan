@@ -18,22 +18,16 @@ class Coin:
 
 
 class Character:
-    def __init__(self, center_x: str, center_y: str, speed: str):
-        if not center_x.isdigit():
-            print("center x must be an integer number!")
-        if not center_y.isdigit():
-            print("center y must be an integer number!")
-        if not speed.isdigit():
-            print("speed must be an integer number!")
-        self.center_x: int = int(center_x)
-        self.center_y: int = int(center_y)
+    def __init__(self, center_x: int, center_y: int, speed: int):
+        self.center_x: int = center_x
+        self.center_y: int = center_y
         self.speed: int = int(speed)
         self.change_x: int = 0
         self.change_y: int = 0
 
 
 class Player(Character):
-    def __init__(self, center_x: str, center_y: str, speed: str):
+    def __init__(self, center_x: int, center_y: int, speed: int):
         super().__init__(center_x, center_y, speed)
         self.score: int = 0
         self.lives: int = 3
@@ -44,7 +38,7 @@ class Player(Character):
 
 
 class Enemy(Character):
-    def __init__(self, center_x: str, center_y: str, speed: str):
+    def __init__(self, center_x: int, center_y: int, speed: int):
         super().__init__(center_x, center_y, speed)
         self.time_to_change_direction: float = 0
 
@@ -64,10 +58,6 @@ class Enemy(Character):
 
 
 class Wall:
-    def __init__(self, center_x: str, center_y: str):
-        if not center_x.isdigit():
-            print("center x must be an integer!")
-        if not center_y.isdigit():
-            print("center y must be an integer!")
-        self.center_x: int = int(center_x)
-        self.center_y: int = int(center_y)
+    def __init__(self, center_x: int, center_y: int):
+        self.center_x: int = center_x
+        self.center_y: int = center_y
