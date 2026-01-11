@@ -25,3 +25,14 @@ class Character:
         self.speed: int = int(speed)
         self.change_x: int = 0
         self.change_y: int = 0
+
+
+class Player(Character):
+    def __init__(self, center_x: str, center_y: str, speed: str):
+        super().__init__(center_x, center_y, speed)
+        self.score: int = 0
+        self.lives: int = 3
+
+    def move(self) -> None:
+        self.center_x *= self.speed
+        self.center_y *= self.speed
