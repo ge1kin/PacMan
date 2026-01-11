@@ -1,3 +1,6 @@
+import random
+
+
 class Coin:
     def __init__(self, center_x: str, center_y: str, value: str):
         if not center_x.isdigit():
@@ -58,3 +61,13 @@ class Enemy(Character):
         self.center_x = self.change_x * self.speed
         self.center_y = self.change_y * self.speed
         self.center_y = self.change_y * self.speed
+
+
+class Wall:
+    def __init__(self, center_x: str, center_y: str):
+        if not center_x.isdigit():
+            print("center x must be an integer!")
+        if not center_y.isdigit():
+            print("center y must be an integer!")
+        self.center_x: int = int(center_x)
+        self.center_y: int = int(center_y)
