@@ -10,6 +10,8 @@ class Coin:
             self.value: int = 10
         else:
             self.value: int = int(value)
+        self.change_x: int = 0
+        self.change_y: int  = 0
 
 
 class Character:
@@ -34,5 +36,5 @@ class Player(Character):
         self.lives: int = 3
 
     def move(self) -> None:
-        self.center_x *= self.speed
-        self.center_y *= self.speed
+        self.center_x = self.change_x * self.speed
+        self.center_y = self.change_y * self.speed
