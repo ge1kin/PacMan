@@ -1,6 +1,6 @@
 import random
 
-
+# testing
 class Coin:
     def __init__(self, center_x: int, center_y: int):
         self.center_x: int = center_x # the x placement of the Coin
